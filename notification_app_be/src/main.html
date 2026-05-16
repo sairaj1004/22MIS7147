@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Storyboard — Freelancer App</title>
+<style>
+  body{font-family:Arial, sans-serif; background:#fafafa; padding:20px;}
+  .page{max-width:1200px; margin:auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+  header{display:flex; justify-content:space-between; margin-bottom:20px;}
+  header .block{padding:10px; border-radius:8px; background:#f5f5f5; min-width:300px;}
+  header .block h4{margin:0; font-size:14px; color:#555;}
+  header .block p{margin:6px 0 0; font-size:15px; font-weight:600;}
+  .title{text-align:center; margin-bottom:20px;}
+  .title h1{margin:0; font-size:20px;}
+  .grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .card{border:1px solid #ddd; border-radius:8px; padding:12px; background:#fff;}
+  .step-head{margin-bottom:10px;}
+  .step-head h3{margin:0; font-size:14px;}
+  .screenshot{
+    height:160px; 
+    border-radius:6px; 
+    padding:8px; 
+    overflow:auto; 
+    display:flex; 
+    flex-direction:column; 
+    align-items:center; 
+    justify-content:center; 
+    text-align:center;
+  }
+  .notes{font-size:12px; color:#333; line-height:1.4; border-top:1px dashed #aaa; padding-top:6px; margin-top:6px;}
+  button{padding:4px 8px; border:none; border-radius:4px; cursor:pointer; font-size:12px;}
+  .blue{background:#3b82f6; color:#fff;}
+  .green{background:#22c55e; color:#fff;}
+  input, textarea{font-size:12px; border:1px solid #ccc; border-radius:4px; padding:4px; margin-bottom:4px; width:90%;}
+  /* Unique background colors */
+  .bg1{background:#e0f2fe;}  
+  .bg2{background:#fef9c3;}  
+  .bg3{background:#dcfce7;}  
+  .bg4{background:#fde2e2;}  
+  .bg5{background:#f3e8ff;}  
+  .bg6{background:#fff3e0;}  
+  .bg7{background:#ffe4e6;}  
+  .bg8{background:#e0f7f9;}  
+  .bg9{background:#f1f5f9;}  
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="title">
+      <h1>Storyboard — Freelancer–Client Workflow</h1>
+      <p>High-level user flow for the core experience</p>
+    </div>
+
+    <header>
+      <div class="block">
+        <h4>Scenario</h4>
+        <p>User registers, posts a job, freelancer applies and gets paid</p>
+      </div>
+      <div class="block">
+        <h4>Persona</h4>
+        <p>Client: Lily — new user looking to hire a designer</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Step 1 -->
+<div class="card">
+    <div class="step-head"><h3>Step 1: Home / Landing</h3></div>
+    <div class="screenshot bg1" style="flex-direction:row; justify-content:center; gap:20px;">
+      <button class="blue">Login</button>
+      <button class="green">Register</button>
+    </div>
+    <div class="notes">
+      User opens website and lands on the home page.<br>
+      Options to Login or Register are visible.<br>
+      Clear CTAs guide user into workflow.
+    </div>
+  </div>
+  
+
+      <!-- Step 2 -->
+      <div class="card">
+        <div class="step-head"><h3>Step 2: Register / Login</h3></div>
+        <div class="screenshot bg2">
+          <input placeholder="Username" /><br>
+          <input placeholder="Password" type="password" /><br>
+          <button class="blue">Login</button>
+        </div>
+        <div class="notes">
+          User chooses whether to sign up or login.<br>
+          Role selection: Client or Freelancer.<br>
+          Secure form with validation.
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="card">
+        <div class="step-head"><h3>Step 3: Client Dashboard</h3></div>
+        <div class="screenshot bg3">
+          <button class="blue">Post Project</button><br>
+          <button class="green">View Progress</button>
+        </div>
+        <div class="notes">
+          Client dashboard with two main actions:<br>
+          Post a new project and check project progress.<br>
+          Helps client manage work efficiently.
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="card">
+        <div class="step-head"><h3>Step 4: Project Posting</h3></div>
+        <div class="screenshot bg4">
+          <input placeholder="Project Title" /><br>
+          <textarea placeholder="Description"></textarea><br>
+          <button class="green">Submit</button>
+        </div>
+        <div class="notes">
+          Client fills form with job details.<br>
+          Sets budget, deadline, and description.<br>
+          Posts job to be visible to freelancers.
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="card">
+        <div class="step-head"><h3>Step 5: Freelancer Dashboard</h3></div>
+        <div class="screenshot bg5">
+          <button class="blue">Apply for Job</button>
+        </div>
+        <div class="notes">
+          Freelancer logs in and sees jobs.<br>
+          Can filter by category or budget.<br>
+          Option to apply or view details.
+        </div>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="card">
+        <div class="step-head"><h3>Step 6: Apply / Bidding</h3></div>
+        <div class="screenshot bg6">
+          <textarea placeholder="Write proposal..."></textarea><br>
+          <button class="blue">Send Proposal</button>
+        </div>
+        <div class="notes">
+          Freelancer submits proposal/bid.<br>
+          Includes cover letter and cost estimate.<br>
+          Client receives notification of new bid.
+        </div>
+      </div>
+
+      <!-- Step 7 (Project Progress Dashboard) -->
+      <div class="card">
+        <div class="step-head"><h3>Step 7: Project Progress</h3></div>
+        <div class="screenshot bg7" style="align-items:center; text-align:center;">
+          <div style="margin-bottom:8px; font-size:13px; font-weight:bold;">Overall Progress</div>
+          <!-- Progress Bar -->
+          <div style="background:#e5e7eb; border-radius:6px; height:16px; width:90%; margin:0 auto 12px;">
+            <div style="background:#3b82f6; height:100%; width:70%; border-radius:6px;"></div>
+          </div>
+          <!-- Milestones -->
+          <div style="font-size:12px; margin-bottom:8px; text-align:left; width:90%;">
+            ✅ Milestone 1: Requirement Gathering<br>
+            ⏳ Milestone 2: Design Phase<br>
+            ⬜ Milestone 3: Final Delivery
+          </div>
+          <!-- Status Widgets -->
+          <div style="display:flex; gap:10px; justify-content:center; margin-top:10px; font-size:12px; width:90%;">
+            <div style="flex:1; background:#fff; border:1px solid #ccc; border-radius:6px; padding:6px; text-align:center;">
+              <strong>Tasks</strong><br>12/20
+            </div>
+            <div style="flex:1; background:#fff; border:1px solid #ccc; border-radius:6px; padding:6px; text-align:center;">
+              <strong>Deadline</strong><br>5 Days Left
+            </div>
+          </div>
+        </div>
+        <div class="notes">
+          Client checks progress on a dashboard.<br>
+          Shows % completion, milestones, tasks and deadlines.<br>
+          Provides transparency without needing status calls.
+        </div>
+      </div>
+
+      <!-- Step 8 (Contract & Submission) -->
+      <div class="card">
+        <div class="step-head"><h3>Step 8: Contract & Submission</h3></div>
+        <div class="screenshot bg8">
+          <button class="blue">Submit Work</button>
+        </div>
+        <div class="notes">
+          Client accepts freelancer proposal.<br>
+          Work milestones defined clearly.<br>
+          Freelancer uploads completed work.
+        </div>
+      </div>
+
+      <!-- Step 9 (Payment & Rating) -->
+      <div class="card">
+        <div class="step-head"><h3>Step 9: Payment & Rating</h3></div>
+        <div class="screenshot bg9">
+          <button class="green">Pay Now</button><br>
+          ⭐⭐⭐⭐⭐
+        </div>
+        <div class="notes">
+          Client makes secure payment.<br>
+          Both client and freelancer leave ratings.<br>
+          Workflow ends with confirmation.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
